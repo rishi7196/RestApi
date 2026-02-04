@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="serlizationConcept.PostCall">
+      <class name="Test.SchemaValidation">
         <methods>
-          <include name="post"/>
+          <include name="getSchema"/>
         </methods>
-      </class> <!-- serlizationConcept.PostCall -->
+      </class> <!-- Test.SchemaValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

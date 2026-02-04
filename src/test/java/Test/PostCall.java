@@ -14,7 +14,8 @@ public class PostCall {
 	{
 		RestAssured.baseURI="https://reqres.in/";
 		
-		String response=given().log().all().
+		String response=given().log().all()
+				 .header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa").
 				header("Content-type","application/json").when().body(payloads.post())
 		.post("api/users").then().assertThat().
 		statusCode(201).extract().response().asString();
@@ -31,7 +32,9 @@ public class PostCall {
 	public void get()
 	{
 		RestAssured.baseURI="https://reqres.in/";
-		String response=given().log().all().when().get("api/users?page=2").then().assertThat().statusCode(200)
+		String response=given().log().all()
+				.header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa").
+				when().get("api/users?page=2").then().assertThat().statusCode(200)
 		.extract().response().asString();
 		System.out.println(response);
 		
@@ -45,7 +48,8 @@ public class PostCall {
 	public void getAll()
 	{
 		RestAssured.baseURI="https://reqres.in/";
-		String response=given().log().all().when()
+		String response=given().log().all().header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa")
+				.when()
 				.get("api/users?page=2").then().assertThat().statusCode(200)
 		.extract().response().asString();
 		System.out.println(response);
