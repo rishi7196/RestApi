@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.NestedArray">
+      <class name="Specidication.ApiSetUp">
         <methods>
-          <include name="nested"/>
+          <include name="SetUp"/>
+          <include name="getUser"/>
         </methods>
-      </class> <!-- Test.NestedArray -->
+      </class> <!-- Specidication.ApiSetUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

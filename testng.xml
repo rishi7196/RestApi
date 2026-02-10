@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="utlities.ExtentReportTestNg"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="Test.PostCallJPG" />
+			<class name="Test.NestedArray" />
+			<class name="Test.PutValidation" />
+			<class name="Test.PostCall" />
+			<class name="Test.SchemaValidation" />
+			<class name="Test.ValidateApiResponse" />
+			<class name="Test.SchemaValidation" />
+			<class name="Test.ApiPagination" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

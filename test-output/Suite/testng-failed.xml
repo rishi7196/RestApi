@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utlities.ExtentReportTestNg"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Test.PostCallJPG">
+        <methods>
+          <include name="jpg"/>
+        </methods>
+      </class> <!-- Test.PostCallJPG -->
+      <class name="Test.SchemaValidation">
+        <methods>
+          <include name="getSchema"/>
+        </methods>
+      </class> <!-- Test.SchemaValidation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

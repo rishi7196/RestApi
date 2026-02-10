@@ -14,6 +14,7 @@ public class PutValidation {
 		RestAssured.baseURI = "https://reqres.in/";
 		String res = given().log().all()
 				.header("Content-type", "application/json")
+				.header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa")
 				.when().get("/api/users?page=2")
 				.then().assertThat().
 				statusCode(200).body("page", equalTo(2))

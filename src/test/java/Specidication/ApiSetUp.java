@@ -25,6 +25,7 @@ public class ApiSetUp {
 		requestSpec= new RequestSpecBuilder()
 				.setBaseUri("https://reqres.in/")
 				.addHeader("Content-Type", "application/json")
+				.addHeader("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa")
 				.build();
 		
 		responseSpec= new ResponseSpecBuilder()
