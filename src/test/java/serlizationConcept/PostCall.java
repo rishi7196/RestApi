@@ -6,6 +6,7 @@ import static io.restassured.RestAssured.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
+import utlities.CommaonUtils;
 
 
 
@@ -17,8 +18,8 @@ public class PostCall {
 	public void post()
 	{
 		RestAssured.baseURI="https://reqres.in";
-		userrequest.setJob("QA");
-		userrequest.setName("rishi");
+		userrequest.setJob(CommaonUtils.getJobName());
+		userrequest.setName(CommaonUtils.getRandomName());
 		String res=given().log().all().contentType(ContentType.JSON)
 				.header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa")
 
@@ -32,8 +33,8 @@ public class PostCall {
 	public void getId()
 	{
 		RestAssured.baseURI="https://reqres.in";
-		userrequest.setJob("SDET");
-		userrequest.setName("priya kumar");
+		userrequest.setJob(CommaonUtils.getJobName());
+		userrequest.setName(CommaonUtils.getRandomName());
 		String response=given().log().all().contentType(ContentType.JSON)
 		.header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa")
 		.body(userrequest).when().post("api/users").then().assertThat().statusCode(201)
