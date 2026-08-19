@@ -1,10 +1,8 @@
 package serlizationConcept;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+@Data
 
-@Getter
-@Setter
 public class UserRequest {
 	private String name;
 	private String job;

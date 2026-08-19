@@ -3,7 +3,6 @@ package serlizationConcept;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -18,9 +17,8 @@ public class PostCall {
 	public void post()
 	{
 		RestAssured.baseURI="https://reqres.in";
-		UserRequest request= new UserRequest();
-		userrequest.setName("john");
-		userrequest.setJob("QA Engineer");
+		userrequest.setJob("QA");
+		userrequest.setName("rishi");
 		String res=given().log().all().contentType(ContentType.JSON)
 				.header("x-api-key", "reqres_5e5feddb161f432298669b3dc4a852aa")
 
