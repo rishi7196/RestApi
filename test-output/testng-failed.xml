@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Specidication.ApiSetUp">
+      <class name="dbConnection.PostCallValidation">
         <methods>
-          <include name="SetUp"/>
-          <include name="getUser"/>
+          <include name="post"/>
         </methods>
-      </class> <!-- Specidication.ApiSetUp -->
+      </class> <!-- dbConnection.PostCallValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

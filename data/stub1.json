@@ -1,7 +1,7 @@
 {
 	"request": {
 		"method": "GET",
-		"url": "/watsaaup"
+		"url": "/rishi"
 	},
 	"response": {
 		"status": 200,

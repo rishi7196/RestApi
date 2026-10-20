@@ -88,7 +88,16 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- ExtentReports - Source: https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.7</version>
+		</dependency>
+
+
+		<!-- ExtentReports - Source:
+		https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
